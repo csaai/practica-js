@@ -7,16 +7,16 @@
         <p>Comprender como los eventos se relacionan con las modificaciones del arbol DOM. Varios eventos pueden actuar sobre los mismos objetos</p>
         <p>En concreto se pueden modificar imagenes</p>
         
-        <img id="imagen" onclick="cambiaImagen()" src="02-off.png" width="100" height="100">
+        <img id="imagen" onclick="cambiaImagen()" src="ejercicio-06-off.png" width="100" height="100">
 
         <p>Pulso el boton para encender y apgar</p>
         <script>
             function cambiaImagen() {
                 var image = document.getElementById('imagen');
-                if (image.src.match("02-off.png")) {
-                    image.src = "02-on.png";
+                if (image.src.match("ejercicio-06-off.png")) {
+                    image.src = "ejercicio-06-on.png";
                 } else {
-                    image.src = "02-off.png";
+                    image.src = "ejercicio-06-off.png";
                 }
             }
         </script>
