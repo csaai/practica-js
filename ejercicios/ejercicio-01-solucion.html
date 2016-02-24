@@ -2,24 +2,30 @@
 <html>
     <head>
         <script>
-            function alpulsar(){
+            function alpulsar(boton){
+                if ( ! boton.hasOwnProperty("pulsaciones") ) {
+                    boton.pulsaciones = 0;
+                }
                 var container = document.getElementById("parrafo");
-                container.innerHTML="Has pulsado el boton" ;        
+                container.innerHTML="Has pulsado el boton " + boton.id + ": " + ++boton.pulsaciones + " veces";        
             }
         </script>
     </head>
     <body>
-        <h1>Ejercicio 1</h1>
+        <h1>Ejercicio 3</h1>
         <h2>Objectivo</h2>
-        <p>Demostrar la capacidad de JavaScript como nexo entre las acciones del usuario y el modelo de datos DOM</p>
-        <h2>Objetivo</h2>
-        <p>Definir funciones JavaScript</p>
-        <h2>Objetivo</h2>
-        <p>Asociar eventos de un elemento con acciones (funciones) JavaScript</p>
-        
+        <p>Iniciarse en el manejo de objetos JavaScript</p>
+        <h2>Objectivo</h2>
+        <p>Demostrar como los objetos JavaScript se pueden modificar dinamicamente</p>
+        <h2>Objectivo</h2>
+        <p>Manejar par·metros en funciones</p>
+       
         <h1>Ejercicio</h1>
-        <!-- Modificar el contenido del elemento 'parrafo' al pulsar el boton-->
+        <!-- Modificar el contenido del elemento 'parrafo' al pulsar cualquiera de los botonos-->
+        <!-- Añadir in contador que indique el numero de pulsaciones realizadas en cada uno de los botones -->
+        <button id="azul" onclick="alpulsar(this)">Pulsa Rojo</button>
+        <button id="rojo" onclick="alpulsar(this)">Pulsa Azul</button>
+
         <p id="parrafo"></p>
-        <button onclick="alpulsar()">Pulsame</button>
     </body>
 </html>
